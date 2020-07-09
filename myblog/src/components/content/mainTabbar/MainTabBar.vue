@@ -1,34 +1,51 @@
 <template>
 <a-row>
   <tab-bar>
-    <a-col :span="6">
- <tab-bar-item path="/home">
-      <img slot="item-icon" src="~assets/img/tabbar/home.svg" alt="">
-      <img slot="item-icon-active" src="~assets/img/tabbar/home_active.svg" alt="">
-      <div slot="item-text">首页</div>
+    <a-col :span="3"></a-col>
+    <a-col :span="6">Logo</a-col>
+
+    <a-col :span="2">
+    <tab-bar-item path="/home">
+      <div slot="item-text">首页 </div>
     </tab-bar-item>
     </a-col>
-     <a-col :span="6">
-    <tab-bar-item path="/category">
-      <img slot="item-icon" src="~assets/img/tabbar/category.svg" alt="">
-      <img slot="item-icon-active" src="~assets/img/tabbar/category_active.svg" alt="">
-      <div slot="item-text">分类</div>
+
+     <a-col :span="2">
+    <tab-bar-item path="/technology">
+
+      <div slot="item-text">技术
+      </div>
     </tab-bar-item>
-</a-col>
-      <a-col :span="6">
-    <tab-bar-item path="/cart">
-      <img slot="item-icon" src="~assets/img/tabbar/shopcart.svg" alt="">
-      <img slot="item-icon-active" src="~assets/img/tabbar/shopcart_active.svg" alt="">
-      <div slot="item-text">购物车</div>
+    </a-col>
+
+      <a-col :span="2">
+    <tab-bar-item path="/life">
+
+      <div slot="item-text">生活</div>
     </tab-bar-item>
-</a-col>
-      <a-col :span="6">
-    <tab-bar-item path="/profile">
-      <img slot="item-icon" src="~assets/img/tabbar/profile.svg" alt="">
-      <img slot="item-icon-active" src="~assets/img/tabbar/profile_active.svg" alt="">
-      <div slot="item-text">我的</div>
+   </a-col>
+
+      <a-col :span="2">
+    <tab-bar-item path="/readbooks">
+
+      <div slot="item-text">读书</div>
     </tab-bar-item>
       </a-col>
+
+        <a-col :span="2">
+    <tab-bar-item path="/profile">
+
+      <div slot="item-text">关于我</div>
+    </tab-bar-item>
+      </a-col>
+
+      <a-col :span="2">
+    <tab-bar-item path="/login">
+
+      <div slot="item-text">登录/注册</div>
+    </tab-bar-item>
+      </a-col>
+
   </tab-bar>
   </a-row>
 </template>
@@ -42,6 +59,10 @@
     components: {
       TabBar,
       TabBarItem
+    },data(){
+      return{
+        placements:['1','2','3']
+      }
     }
   }
 </script>

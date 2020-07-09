@@ -36,6 +36,9 @@
     },
     methods: {
       itemClick() {
+        //history:跳转到指定url,替换history栈中最后一个记录,点击后提会返回至上上一个页面
+        //使用同push\
+        //push:向history栈中添加一个新的记录点击后退会返回上一个页面
         this.$router.replace(this.path)
       }
     }
