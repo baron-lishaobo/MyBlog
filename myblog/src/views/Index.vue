@@ -1,18 +1,21 @@
 <template>
-  <div>
-<a-layout>
-      <a-layout-header><MainTabBar/></a-layout-header>
+  <div id="mian">
+<a-layout type="flex">
+      <a-layout-header :style="{position:'fixed',zIndex:1,width:'100%'}"><MainTabBar/></a-layout-header>
       <a-layout>
-         <a-layout-sider>Sider</a-layout-sider>
-        <a-layout-content><router-view/></a-layout-content>
-        <a-layout-sider>Sider</a-layout-sider>
+        <a-layout-content :style="{marginTop:'65px'}"><router-view/></a-layout-content>
       </a-layout>
-      <a-layout-footer>Footer</a-layout-footer>
+
+      <a-layout-footer :style="{textAlign:'center'}">
+         Ant Design ©2018 Created by Ant UED
+
+      </a-layout-footer>
     </a-layout>
   </div>
 </template>
 
 <script>
+import "assets/css/base.less"
 import MainTabBar from 'components/content/mainTabbar/MainTabBar.vue'
 export default {
   name:'Index',
@@ -21,3 +24,10 @@ MainTabBar
   }
 }
 </script>
+
+<style  scoped>
+#mina > .ant-layout-sider{
+  background-color:hotpink;
+
+}
+</style>

@@ -1,4 +1,5 @@
 <template>
+<div>
 <a-row>
   <tab-bar>
     <a-col :span="3"></a-col>
@@ -48,6 +49,7 @@
 
   </tab-bar>
   </a-row>
+  </div>
 </template>
 
 <script>

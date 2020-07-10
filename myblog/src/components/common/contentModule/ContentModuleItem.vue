@@ -1,13 +1,7 @@
 <template>
-<div>
-<a-row type="flex" justify="space-around" align="middle" style="height:120px" >
-  <a-col :span="7" class="left">  <slot name="item-title"></slot></a-col>
-  <a-col :span="1"></a-col>
-  <a-col :span="7" class="left">   <slot></slot></a-col>
-  <a-col :span="1"></a-col>
-  <a-col :span="7" class="left">  <slot></slot></a-col>
-</a-row>
-
+<div class="contentModuleItem">
+<div :style="activeStyle" @click="itemClick"><slot name="moduleTitle"></slot></div>
+<div><slot name="moduleContent"></slot></div>
 </div>
 </template>
 
@@ -17,6 +11,32 @@ export default {
 }
 </script>
 
+
+<script>
+export default {
+  name:'ContentModuleItem',
+  props:{
+  path:String,
+  activeColor:{
+    type:String,
+    default:'red'
+  }
+},
+  methods:{
+itemClick(){
+  this.$router.replace(this.path);
+}
+},
+computed:{
+  isActive(){
+return this.$route.path.indexOf(this.path)!==-1;
+  },
+  activeStyle(){
+    return this.isActive?{color:this.activeColor}:{}
+  }
+}
+}
+</script>
 <style scoped>
 
 </style>

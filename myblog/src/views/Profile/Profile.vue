@@ -1,5 +1,13 @@
 <template>
   <div class="profile">
-    <h1>This is an about page</h1>
+    <SearchInput/>
   </div>
 </template>
+<script>
+import SearchInput from 'components/common/searchInput/SearchInput.vue';
+export default {
+  components:{
+    SearchInput
+  }
+}
+</script>

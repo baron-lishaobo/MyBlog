@@ -1,11 +1,7 @@
 <template>
-<div>
-<a-row type="flex" justify="space-around" align="middle" style="height:120px" >
-  <a-col :span="7" class="left">  <slot name="item-title"></slot></a-col>
-  <a-col :span="1"></a-col>
-  <a-col :span="7" class="left">   <slot></slot></a-col>
-  <a-col :span="1"></a-col>
-  <a-col :span="7" class="left">  <slot></slot></a-col>
+<div class="content-module" :style="{width,height}">
+<a-row type="flex" justify="space-around" align="middle" >
+<slot></slot>
 </a-row>
 
 </div>
@@ -13,10 +9,21 @@
 
 <script>
 export default {
-
+props:{
+width:{
+  type:String,
+  default:'400px'
+},
+height:{
+  type:String,
+  default:'420px'
+}
+}
 }
 </script>
 
 <style scoped>
-
+.content-module{
+  background-color:greenyellow;
+}
 </style>

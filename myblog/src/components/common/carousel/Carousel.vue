@@ -2,14 +2,12 @@
   <a-carousel arrows autoplay>
     <div
       slot="prevArrow"
-      slot-scope="props"
       class="custom-slick-arrow"
       style="left: 10px;zIndex: 1"
-
     >
       <a-icon type="left-circle" />
     </div>
-    <div slot="nextArrow" slot-scope="props" class="custom-slick-arrow" style="right: 10px;">
+    <div slot="nextArrow"  class="custom-slick-arrow" style="right: 10px;">
       <a-icon type="right-circle" />
     </div>
     <div><slot name="image-1"></slot></div>
@@ -22,10 +20,10 @@
 export default {};
 </script>
 <style scoped>
-/* For demo */
+
 .ant-carousel >>> .slick-slide {
   text-align: center;
-  height: 160px;
+  height: 210px;
   line-height: 160px;
   background: #364d79;
   overflow: hidden;

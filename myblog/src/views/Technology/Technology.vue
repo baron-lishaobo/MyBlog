@@ -1,6 +1,15 @@
 <template>
 <div class="technology">
-<h1> This is a technology page</h1>
+<SearchInput/>
 </div>
 
 </template>
+
+<script>
+import SearchInput from 'components/common/searchInput/SearchInput.vue';
+export default {
+  components:{
+    SearchInput
+  }
+}
+</script>
