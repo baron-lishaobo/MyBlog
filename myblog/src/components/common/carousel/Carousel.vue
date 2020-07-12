@@ -10,14 +10,26 @@
     <div slot="nextArrow"  class="custom-slick-arrow" style="right: 10px;">
       <a-icon type="right-circle" />
     </div>
-    <div><slot name="image-1"></slot></div>
-    <div><slot name="image-2"></slot></div>
-    <div><slot name="image-3"></slot></div>
-    <div><slot name="image-4"></slot></div>
+    <div v-for="(image,index) in images"  :key="index"  :images="images">
+         <div class="carousel-image"> <img :src="image" alt=""></div>
+    </div>
+  
   </a-carousel>
 </template>
 <script>
-export default {};
+export default {
+  name:'Carousel',
+  props:{
+    images:{
+      type:Array,
+      default(){
+        return []
+      }
+    }
+  },
+  mounted(){
+  }
+};
 </script>
 <style scoped>
 
@@ -46,5 +58,8 @@ export default {};
 
 .ant-carousel >>> .slick-slide h3 {
   color: #fff;
+}
+.carousel-image img{
+  width: 100%;
 }
 </style>

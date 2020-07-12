@@ -1,29 +1,28 @@
 <template>
-<div class="content-module" :style="{width,height}">
-<a-row type="flex" justify="space-around" align="middle" >
+  
+<div :style="{width:contentModuleWidth,height:contentModuleHeigth}" class="content-module">
 <slot></slot>
-</a-row>
-
 </div>
+
 </template>
 
 <script>
 export default {
 props:{
-width:{
-  type:String,
-  default:'400px'
-},
-height:{
-  type:String,
-  default:'420px'
-}
+  contentModuleWidth:{
+    type:String,
+    default:''
+  },  
+  contentModuleHeigth:{
+    type:String,
+    default:''
+  }
 }
 }
 </script>
 
 <style scoped>
 .content-module{
-  background-color:greenyellow;
+  background-color:white;
 }
 </style>

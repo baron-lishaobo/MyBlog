@@ -26,7 +26,7 @@ this.img=`url(${backgroundimage})`
   },
   data(){
     return{
-img:""
+        img:""
       }
   },
   methods:{
@@ -38,5 +38,7 @@ img:""
 </script>
 
 <style lang="less" scoped>
-
+.search-input{
+  width: 100%;
+}
 </style>

@@ -6,11 +6,12 @@
 
 <script>
 import Index from 'views/Index.vue';
-
+import BScroll from 'better-scroll';
 export default {
     name: 'app',
     components: {
-      Index
+      Index,
+      BScroll
     }
   }
 </script>
@@ -18,5 +19,6 @@ export default {
 
 #app{
   width: 100%;
+  
 }
 </style>

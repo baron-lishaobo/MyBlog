@@ -7,7 +7,7 @@
       </a-layout>
 
       <a-layout-footer :style="{textAlign:'center'}">
-         Ant Design ©2018 Created by Ant UED
+         Baron's Blog ©2020 Created by Baron
 
       </a-layout-footer>
     </a-layout>
