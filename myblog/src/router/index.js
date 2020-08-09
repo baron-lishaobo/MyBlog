@@ -25,6 +25,9 @@ const Profile = () =>
 const Index = () =>
     import ('views/Index.vue');
 
+const Login = () =>
+    import ('views/Login.vue')
+
 
 const routes = [{
         path: '/',
@@ -49,6 +52,10 @@ const routes = [{
     {
         path: '/profile',
         component: Profile
+    }, {
+        path: '/login',
+        name: 'Name',
+        component: Login
     }
 
 
