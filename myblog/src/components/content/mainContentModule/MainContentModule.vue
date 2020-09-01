@@ -4,13 +4,11 @@
     
 <ContentModule :contentModuleWidth="contentModuleWidth" :contentModuleHeigth="contentModuleHeigth">
 <ContentModuleItem>
-  <div class="content-module-title-left" slot="moduleTitleLeft"><a href="#">This is article title</a> </div>
-  <div class="content-module-title-right" slot="moduleTitleRight"><a  :href="contentHref">More</a></div>
-  <div class="content-module-content" slot="moduleContent" :contents="contents">
-    <ul>
-      <li :key="index" v-for="(content,index) in contents">content</li>
-    </ul>
-  </div>
+  
+<div class="content-module-title-left" slot="moduleTitleLeft"><a :href="contentHref" target="_blank" :articleTitle="articleTitle">{{articleTitle}}</a> </div>
+  <div class="content-module-title-right" slot="moduleTitleRight"><a  :href="contentHref" target="_blank">More</a></div>
+  
+  <div class="content-module-content" slot="moduleContent" :contents="articleTitle">222222</div>
 </ContentModuleItem>
 </ContentModule>
 
@@ -30,6 +28,11 @@ contentModuleWidth:{
 contentModuleHeigth:{
   type:String
 },
+articleTitle:{
+  type:String,
+  default:'Article Title'
+}
+,
 contentHref:{
   type:String,
   default:'#'
@@ -51,9 +54,14 @@ ContentModuleItem
 .main-content-module{
   width: 100%;
 }
+.content-module-title-left{
+
+}
 .content-module-title{
   
   text-align: right;
- 
+}
+.content-module-content{
+
 }
 </style>

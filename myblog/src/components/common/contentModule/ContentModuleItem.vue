@@ -2,7 +2,7 @@
 <div class="contentModuleItem">
   <div class="moduleTitleLeft"> <slot name="moduleTitleLeft"></slot></div>
 <div class="moduleTitleRight" :style="activeStyle" @click="itemClick"><slot name="moduleTitleRight"></slot></div>
-<div><slot name="moduleContent"></slot></div>
+<div class="moduleContent"><slot name="moduleContent"></slot></div>
 </div>
 </template>
 
@@ -54,5 +54,9 @@ flex: 1;
   right: 10px;
   position: absolute;
   
+}
+.moduleContent{
+  width: 100%;
+
 }
 </style>

@@ -10,7 +10,7 @@
     <div slot="nextArrow"  class="custom-slick-arrow" style="right: 10px;">
       <a-icon type="right-circle" />
     </div>
-    <div v-for="(image,index) in images"  :key="index"  :images="images">
+    <div v-for="(image,index) in images"  :key="index">
          <div class="carousel-image"> <img :src="image" alt=""></div>
     </div>
   
@@ -35,7 +35,7 @@ export default {
 
 .ant-carousel >>> .slick-slide {
   text-align: center;
-  height: 210px;
+  height: 260px;
   line-height: 160px;
   background: #364d79;
   overflow: hidden;

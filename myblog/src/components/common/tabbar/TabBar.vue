@@ -21,5 +21,7 @@
     right: 0;
     top: 0;
     box-shadow: 0 -1px 1px rgba(100,100,100,.2);
+    cursor: pointer;
+    text-align: center;
   }
 </style>

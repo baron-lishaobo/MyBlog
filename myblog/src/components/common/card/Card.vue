@@ -31,7 +31,7 @@ default:'card Title'
 
 <style lang="less" scoped>
 .module-card{
-  background:#ECECEC;
-  padding:20px
+  background:#ececec;
+  padding:10px
 }
 </style>

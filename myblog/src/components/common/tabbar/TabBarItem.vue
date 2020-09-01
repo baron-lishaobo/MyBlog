@@ -1,9 +1,9 @@
 <template>
   <!--所有的item都展示同一个图片, 同一个文字-->
   <div class="tab-bar-item" @click="itemClick">
-    <div v-if="!isActive"><slot name="item-icon"></slot></div>
-    <div v-else><slot name="item-icon-active"></slot></div>
-    <div :style="activeStyle"><slot name="item-text"></slot></div>
+    <div class="tab-bar-item-content" v-if="!isActive"><slot name="item-icon"></slot></div>
+    <div class="tab-bar-item-content" v-else><slot name="item-icon-active"></slot></div>
+    <div class="tab-bar-item-content" :style="activeStyle" ><slot name="item-text"></slot></div>
   </div>
 </template>
 
@@ -45,19 +45,23 @@
   }
 </script>
 
-<style scoped>
-  /* .tab-bar-item {
-    flex: 1;
-    text-align: center;
-    height: 49px;
-    font-size: 14px;
-  } */
+<style lang="less" scoped>
 
-  .tab-bar-item img {
-    width: 24px;
-    height: 24px;
-    margin-top: 3px;
-    vertical-align: middle;
-    margin-bottom: 2px;
+  .tab-bar-item {
+    /* flex: 1; */
+    display: flex;
+    height: auto;
+    font-size: 24px;
+    // border: 1px solid grey;
+    border-radius: 8px;
+    margin-left:12px ;
+    margin-top: 12px;
+    margin-bottom: 12px;
+   
   }
+  .tab-bar-item-content{
+    
+    margin: 8 auto;
+    font-family:LiSu,STLiti,"Microsoft YaHei","微软雅黑","MicrosoftJhengHei","华文细黑","STHeiti,MingLiu "
+}
 </style>
