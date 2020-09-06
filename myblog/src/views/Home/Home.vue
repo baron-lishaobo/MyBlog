@@ -8,7 +8,6 @@
     <Carousel  :images="images"></Carousel>
     </div>
     </a-col>
-  <!-- <a-col :span="1"></a-col> -->
   <a-col :span="6">
     <Card cardTitle='Technology Category' cardWidth='100%' cardHeight='260px'>
       <div slot='card-content'>
@@ -19,10 +18,11 @@
   <Tag color="cyan">Java</Tag>
   <Tag color="orange">Docker</Tag>
   <Tag color="green">Go</Tag>
-  <Tag color="red">Python</Tag>
+  
  
   </div>
 <div class="home-tag">
+  <Tag color="red">Python</Tag>
    <Tag color="green">Go</Tag>
   <Tag color="red">Python</Tag>
 </div>
@@ -33,25 +33,10 @@
 
 
 <a-row>
-<a-layout>
 <a-col :span="2"></a-col>
-
-<a-col :span="4">
-  <!-- <a-layout-sider class="content-layout-sider" > -->
-    <Calendar/>
-  <!-- </a-layout-sider> -->
-</a-col>
-
-  <a-col :span="11">
-  <a-layout-content >
-    <AList/>
-  </a-layout-content>
-  </a-col>
-
-<a-col :span="5">
-<a-layout-sider class="content-layout-sider left" ></a-layout-sider>
-</a-col>
-</a-layout>
+<a-col :span="4"><Calendar/></a-col>
+<a-col :span="11"><AList :listData="reverseDemoList" :antFooter="antFooter"/></a-col>
+<a-col :span="7"></a-col>
 </a-row>
 
 <BackTop/>
@@ -89,32 +74,27 @@ export default {
   },
   data(){
     return {
-
        images:[img1,img2,img3,img4],
-       DemoList:[]
+       listData:[],
+       antFooter:"Test"
     }
   },
   computed:{
-reverseDemoList(){
-  return this.DemoList.reverse();
+    reverseDemoList(){
+  return this.listData.reverse();
 }
   },
   methods:{
-    GetImages(){
-    },
     GetDemoPages(){
-      this.http.post('api/App_News/getDemoPageList').then(x=>this.DemoList=x.data);
+      this.http.post('api/App_News/getDemoPageList').then(x=>this.listData=x.data);
       
     }
   },
-  created(){
-
-
-  },
   mounted(){
-    this.GetDemoPages();
-    
+   this.GetDemoPages();
+   
   }
+
 }
 </script>
 
@@ -140,5 +120,7 @@ background-color: #f6f6f6 !important;
   display: flex;
   margin: 5px auto;
   padding: 5px;
+  width: auto;
+  text-align: center;
 }
 </style>
